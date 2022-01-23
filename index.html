@@ -1,0 +1,136 @@
+<html>
+
+<script src="javascript/jquery-3.5.1.min.js"></script>
+
+<title>LEAD ARCHITECTURE</title>
+<meta charset="UTF-8">
+<meta name="description" content="LEAD ARCHITECTURE">
+<meta name="keywords" content="LEAD ARCHITECTURE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.body{
+  font-family: 'louis_george_cafebold';
+  src: url('fonts/louis_george_cafe_bold-webfont.woff2') format('woff2'),
+         url('fonts/louis_george_cafe_bold-webfont.woff') format('woff');
+}
+
+.background {
+          width: 100%;
+	        height: 100%;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        background-color: #ffffff;
+	        display:flex;
+	        justify-content: center;
+	        align-items: center;
+	        z-index: 5000;
+}
+
+.box {
+          display: inline-block;
+          width: 854px;
+          height: 480px;
+          position: relative;
+}
+
+.langbox{
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+.langtext{
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.75;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.countrybox{
+  display: flex;
+  align-content: center;
+  width: 100%;
+  margin: 1rem;
+}
+
+.flags{
+  width: 2rem;
+  height: 2rem;
+  filter: grayscale(1);
+  opacity: 0.75;
+}
+
+.image {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url(icons/wallpaper.png);
+}
+
+.elementToFadeIn {
+          -webkit-animation: animationName 5s;
+          -moz-animation: animationName 5s;
+          -o-animation: animationName 5s;
+          animation: animationName 5s;
+}
+
+@keyframes animationName {
+  0%   { opacity:0; }
+  10%   { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-o-keyframes animationName{
+  0%   { opacity:0; }
+  10%   { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes animationName{
+  0%   { opacity:0; }
+  10%   { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes animationName{
+  0%   { opacity:0; }
+  10%   { opacity:0; }
+  100% { opacity:1; }
+}
+</style>
+
+<body>
+  <div class="background">
+      <div class="box">        
+          <a href="home.html" class="image elementToFadeIn"></a>
+          <div class="langbox">
+            <div class="countrybox">              
+              <a href="home.html" class="langtext">Francais</a>
+              <img class="flags" src="icons/FR.png" alt="">
+            </div>
+
+            <div class="countrybox">
+              <img class="flags" src="icons/UK.png" alt="">
+              <a href="home_EN.html" class="langtext">English</a>
+            </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+<script>
+$('a').click(function(e) {
+e.preventDefault();
+newLocation = this.href;
+$('body').fadeOut(1000, newpage);
+});
+function newpage() {
+window.location = newLocation;
+}
+</script>
+
+</html>
