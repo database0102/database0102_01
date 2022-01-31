@@ -22,6 +22,28 @@
 
 
 
+.majorcontainer {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+  .majorcell {
+	text-align: center;
+	padding: 2rem;
+  }
+  .cell-1 {
+	background: deepskyblue;
+  }
+  .cell-2 {
+	background: orangered;
+  }
+  .cell-3 {
+	background: royalblue;
+  }
+
+
+
 a img,
 iframe,
 img,
